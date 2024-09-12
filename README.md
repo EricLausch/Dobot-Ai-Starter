@@ -9,7 +9,7 @@ Zunächst nutzten wir die von Dobot bereitgestellten Codes aus der offiziellen G
 ## Inhalte des Repositories
 
 - **[Linienverfolgung und Farberkennung](LineTracking_ColorDetection/Dokumentation.md)**: Programmcode, der es dem Roboter ermöglicht, einer Linie zu folgen und Farben wie Rot und Grün zu erkennen.
-- **[Ultraschallsensoren](UltrasonicSensors/Dokumentation.md)**: Programmcode für die Erkennung von Hindernissen mit Ultraschallsensoren.
+- **[Ultraschallsensoren](UltrasonicSensors/main_code.ino)**: Programmcode für die Erkennung von Hindernissen mit Ultraschallsensoren.
 - **[Analyse der ursprünglichen Ansätze](NonWorking_Codes/Dokumentation.md)**: Untersuchung der Dobot-Guideline-Codes, die in unserem Fall nicht die gewünschten Ergebnisse erzielten, sowie eine Erklärung der identifizierten Herausforderungen.
 
 ## Installation und Setup
