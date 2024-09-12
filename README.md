@@ -12,12 +12,9 @@ Zunächst nutzten wir die von Dobot bereitgestellten Codes aus der offiziellen G
 - **[Ultraschallsensoren](UltrasonicSensors)**: Programmcode für die Erkennung von Hindernissen mit Ultraschallsensoren.
 - **[Analyse der ursprünglichen Ansätze](NonWorking_Codes/Dokumentation.md)**: Untersuchung der Dobot-Guideline-Codes, die in unserem Fall nicht die gewünschten Ergebnisse erzielten, sowie eine Erklärung der identifizierten Herausforderungen.
 
-## [Installation and Setup Guide](Installation_and_Setup/setup_guide.md)
+## Installation und Setup
 
-1. **Benötigte Software**: Arduino IDE (Version 1.8.19) einrichten.
-2. **Hardwareanschlüsse**: Schließe die Sensoren und Motoren gemäß der Dobot AI-Starter-Dokumentation an.
-3. **Code hochladen**: Öffne die Codes in der Arduino IDE und lade sie auf den Roboter.
-4. **Testumgebung**: Stelle sicher, dass du eine Testumgebung mit Linien und Hindernissen vorbereitet hast.
+Eine detaillierte Anleitung zur Installation und Einrichtung findet sich in unserem [Installation and Setup Guide](Installation_and_Setup/setup_guide.md).
 
 ## Videodemonstrationen
 
