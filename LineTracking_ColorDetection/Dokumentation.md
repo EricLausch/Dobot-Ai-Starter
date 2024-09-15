@@ -12,7 +12,6 @@ if (irstate == 0b001100) {
 } else if (irstate == 0b000110) {
     AIStarter_SmartBotSetMovment(RIGHT, speed);
 }
-```cpp
 
 Hierbei handelt es sich um eine einfache Bedingung, bei der das IR-Modul erkennt, ob sich der Roboter exakt auf der Linie befindet (Muster: '0b001100'), und ihn entsprechend steuert. Je nach Position wird die Richtung des Roboters angepasst.
 
@@ -29,7 +28,6 @@ if ((redValue1 - greenValue1 > Threshold && redValue1 - blueValue1 > Threshold) 
         // Tiefes Piepen als Signal
     }
 }
-```cpp
 
 Hierbei werden die Rot-, Grün- und Blauwerte der beiden Sensoren miteinander verglichen, um eine zuverlässige Farberkennung zu gewährleisten. Die Nutzung zweier Sensoren sorgt für eine erhöhte Genauigkeit und Stabilität bei der Farbdetektion.
 
