@@ -29,6 +29,6 @@ if ((redValue1 - greenValue1 > Threshold && redValue1 - blueValue1 > Threshold) 
         // Tiefes Piepen als Signal
     }
 }
-
+```
 Hierbei werden die Rot-, Grün- und Blauwerte der beiden Sensoren miteinander verglichen, um eine zuverlässige Farberkennung zu gewährleisten. Die Nutzung zweier Sensoren sorgt für eine erhöhte Genauigkeit und Stabilität bei der Farbdetektion.
 
