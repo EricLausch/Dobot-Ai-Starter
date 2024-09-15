@@ -12,6 +12,7 @@ if (irstate == 0b001100) {
 } else if (irstate == 0b000110) {
     AIStarter_SmartBotSetMovment(RIGHT, speed);
 }
+```
 
 Hierbei handelt es sich um eine einfache Bedingung, bei der das IR-Modul erkennt, ob sich der Roboter exakt auf der Linie befindet (Muster: '0b001100'), und ihn entsprechend steuert. Je nach Position wird die Richtung des Roboters angepasst.
 
