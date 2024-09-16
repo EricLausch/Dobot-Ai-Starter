@@ -6,7 +6,7 @@ Dieses Projekt wurde im Rahmen des Moduls **"Ausgewählte Themen der Automatisie
 
 Zunächst nutzten wir die von Dobot bereitgestellten Codes aus der offiziellen Guideline, um diese Funktionen zu implementieren. Da diese jedoch nicht wie erwartet funktionierten, entwickelten wir eigene Codes zur Lösung der Probleme.
 
-![Übersicht AI-Starter](images/Übersicht_AI-Starter.PNG)
+**![Übersicht AI-Starter](images/Übersicht_AI-Starter.PNG)**
 
 ## Inhalte des Repositories
 
