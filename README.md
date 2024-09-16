@@ -15,6 +15,8 @@ Zunächst nutzten wir die von Dobot bereitgestellten Codes aus der offiziellen G
 ## Installation und Setup
 
 Eine detaillierte Anleitung zur Installation und Einrichtung findet sich in unserem [Installation and Setup Guide](Installation_and_Setup/setup_guide.md).
+Für die Hardwareanschlüsse steht der von Dobot bereitgestellte [AI-Starter User Guide](https://github.com/michi-bot/Dobot-Ai-Starter/raw/main/Installation_and_Setup/AI-Starter_User_Guide.pdf) zur Verfügung. 
+
 
 ## Videodemonstrationen
 
