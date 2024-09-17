@@ -2,7 +2,7 @@
 
 ## Projektübersicht
 
-Dieses Projekt wurde im Rahmen des Moduls **"Ausgewählte Themen der Automatisierung"** durchgeführt. Unser Ziel war es, den **Dobot AI-Starter** so zu programmieren, dass er Linien auf dem Boden verfolgt, Farben erkennt und mithilfe von **Ultraschallsensoren** Hindernisse erkennt.
+Im Rahmen dieses Projektes - welches wir für das Modul **Ausgewählte Themen der Automatisierungstechnik** durchgeführt haben - haben wir einen **AI-Starter** von **Dobot** aufgebaut und programmiert. Ziel war es, dass er Linien auf dem Boden verfolgt, Farben erkennt und mithilfe von Ultraschallsensoren Hindernisse erkennt.
 
 Zunächst nutzten wir die von Dobot bereitgestellten Codes aus der offiziellen Guideline, um diese Funktionen zu implementieren. Da diese jedoch nicht wie erwartet funktionierten, entwickelten wir eigene Codes zur Lösung der Probleme.
 
