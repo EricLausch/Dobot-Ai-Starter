@@ -38,8 +38,8 @@ int Threshold = 20;
 redValue1: Der Farben Sensor 1 liest farbe "Rot"
 redValue2: Der Farben Sensor 2 liest farbe "Rot"
 
- greenValue1: Der Farben Sensor 1 liest farbe "Grün"
- greenValue2: Der Farben Sensor 2 liest farbe "Grün"
+greenValue1: Der Farben Sensor 1 liest farbe "Grün"
+greenValue2: Der Farben Sensor 2 liest farbe "Grün"
 
 blueValue1: Der Farben Sensor 1 liest farbe "Blau"
 blueValue2: Der Farben Sensor 2 liest farbe "Blau"
