@@ -28,9 +28,9 @@ if (irstate == 0b001100) {  // Die mittleren Sensoren (IR3 & IR4) lesen die Schw
 ```
 Hierbei handelt es sich um eine einfache Bedingung, bei der das IR-Modul erkennt, ob sich der Roboter exakt auf der Linie befindet (Muster: 0b001100), und ihn entsprechend steuert. Je nach Position wird die Richtung des Roboters angepasst.
 
-\subsection*{Farberkennung:} Zur Farberkennung verwendet der AI-Starter zwei Farbsensoren. Diese sind in der Lage, die Intensität der Rot-, Grün- und Blauanteile des erfassten Lichts zu messen. Durch Vergleich der Farbsensorwerte mit definierten Schwellenwerten kann das Programm erkennen, ob eine rote oder grüne Farbe vorliegt. Wird eine Farbe erkannt, gibt der Roboter akustische Signale aus (z.B. zweimaliges Piepen bei Rot, dreimaliges Piepen bei Grün), um den Benutzer über die erkannte Farbe zu informieren.
-
 #### Farberkennung
+Zur Farberkennung verwendet der AI-Starter zwei Farbsensoren. Diese sind in der Lage, die Intensität der Rot-, Grün- und Blauanteile des erfassten Lichts zu messen. Durch Vergleich der Farbsensorwerte mit definierten Schwellenwerten kann das Programm erkennen, ob eine rote oder grüne Farbe vorliegt. Wird eine Farbe erkannt, gibt der Roboter akustische Signale aus (z.B. zweimaliges Piepen bei Rot, dreimaliges Piepen bei Grün), um den Benutzer über die erkannte Farbe zu informieren.
+
 Der folgende Code überprüft, ob die Farbe Rot erkannt wird:
 ```cpp
 \begin{lstlisting}[language=ST]
