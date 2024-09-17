@@ -26,5 +26,5 @@ void avoidObstacles() {
         AIStarter_SmartBotSetMovment(FRONT, 100);
     }
 }
-```cpp
+```
 Durch diese Bedingungen stellt das Programm sicher, dass der Roboter in Situationen mit nahegelegenen Hindernissen flexibel reagiert. Es wird stets überprüft, ob links oder rechts mehr Platz zum Ausweichen vorhanden ist, und daraufhin die Fahrtrichtung angepasst. Falls keine Hindernisse vorliegen, setzt der Roboter seine Vorwärtsbewegung fort.
