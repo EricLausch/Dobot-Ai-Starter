@@ -2,7 +2,7 @@
 
 ## Hardwareanschlüsse
 
-Im GitHub-Repository [Dobot AI-Starter](https://github.com/michi-bot/Dobot-Ai-Starter/raw/main/Installation_and_Setup/AI-Starter_User_Guide.pdf) ist eine detaillierte Anleitung zum Aufbau der Hardware zu finden.
+In dem PDF [AI-Starter_User_Guide](https://github.com/michi-bot/Dobot-Ai-Starter/raw/main/Installation_and_Setup/AI-Starter_User_Guide.pdf) ist eine detaillierte Anleitung zum Aufbau der Hardware zu finden.
 
 ## Benötigte Software
 
