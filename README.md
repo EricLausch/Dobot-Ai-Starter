@@ -10,14 +10,14 @@ Zunächst nutzten wir die von Dobot bereitgestellten Codes aus der offiziellen G
 
 ## Inhalte des Repositories
 
-- **[Linienverfolgung und Farberkennung](LineTracking_ColorDetection)**: Programmcode, der es dem Roboter ermöglicht, einer Linie zu folgen und Farben wie Rot und Grün zu erkennen.
-- **[Ultraschallsensoren](UltrasonicSensors)**: Programmcode für die Erkennung von Hindernissen mit Ultraschallsensoren.
-- **[Analyse der ursprünglichen Ansätze](NonWorking_Codes/Dokumentation.md)**: Untersuchung der Dobot-Guideline-Codes, die in unserem Fall nicht die gewünschten Ergebnisse erzielten, sowie eine Erklärung der identifizierten Herausforderungen.
+- **[Programmcode zur Linienverfolgung und Farberkennung](LineTracking_ColorDetection)**
+- **[Programmcode zur Obejktvermeidung](UltrasonicSensors)**
+- **[Analyse der ursprünglichen Ansätze](NonWorking_Codes/Dokumentation.md)**
 
 ## Installation und Setup
 
-Eine detaillierte Anleitung zur Installation und Einrichtung findet sich in unserem [Installation and Setup Guide](Installation_and_Setup/setup_guide.md).
-Für die Hardwareanschlüsse steht der von Dobot bereitgestellte [AI-Starter User Guide](https://github.com/michi-bot/Dobot-Ai-Starter/raw/main/Installation_and_Setup/AI-Starter_User_Guide.pdf) zur Verfügung. 
+- [Installation and Setup Guide](Installation_and_Setup/setup_guide.md).
+- Anleitung für den Hardware Aufbau: [AI-Starter User Guide](https://github.com/michi-bot/Dobot-Ai-Starter/raw/main/Installation_and_Setup/AI-Starter_User_Guide.pdf) 
 
 
 ## Videodemonstrationen
