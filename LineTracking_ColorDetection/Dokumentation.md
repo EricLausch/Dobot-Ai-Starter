@@ -1,34 +1,59 @@
 ### Linien- und Farberkennungs Programm 
 
-Um eine Lösung für das Problem der Linien und Farberkennung finden, haben wir nach ausgiebiger Recherche, unter anderem inspiriert durch das Arduino-Projekt „Line Following Robot“ (siehe https://projecthub.arduino.cc/lightthedreams/line-following-robot-34b1d3) ein Programm entwickelt, dass auf den Funktionen der von Dobot bereitgestellten Bibliothek aufbaut. Dieses Programm kombiniert die Erkennung von Linien mittels Infrarotsensoren mit der Detektion von Farben, um eine Navigation zu ermöglichen.
-
-**Linienverfolgung:** Das Programm liest die Werte von sechs Infrarotsensoren (IR), die an den Unterboden des AI-Starters angebracht sind, um die auf der Testmatte vorgegebenen schwarzen Linien zu verfolgen. Die Daten der IR-Sensoren werden bitweise in einer Variablen zusammengeführt, die den Zustand der Linie (ob erkannt oder nicht) für jeden Sensor speichert. Basierend auf dieser Information steuert das Programm die Bewegungen des AI-Starters, um die Linie präzise zu folgen. Unterschiedliche Bitmuster werden analysiert, um zu bestimmen, ob der Roboter nach links oder rechts ausweichen oder weiter geradeaus fahren muss.
-
-Der folgende Codeblock zeigt die Hauptlogik der Linienverfolgung:
+#### Lininenverfolgung
+Das Programm liest die Werte von sechs Infrarotsensoren (IR), die an den Unterboden des AI-Starters angebracht sind, um die auf der Testmatte vorgegebenen schwarzen Linien zu verfolgen. Die Daten der IR-Sensoren werden bitweise in einer Variablen zusammengeführt, die den Zustand der Linie (ob erkannt oder nicht) für jeden Sensor speichert.
 
 ```cpp
-if (irstate == 0b001100) {
-    AIStarter_SmartBotSetMovment(FRONT, speed);
-} else if (irstate == 0b000110) {
-    AIStarter_SmartBotSetMovment(RIGHT, speed);
+int getIRState() {
+    int irstate = 0;
+    for (int i = 0; i < 6; i++) {
+        irstate |= AIStarter_SmartBotGetIRModuleValue(i) << i;
+    }
+    return irstate;
 }
 ```
+Basierend auf dieser Information steuert das Programm die Bewegungen des AI-Starters, um die Linie präzise zu folgen. Unterschiedliche Bitmuster werden analysiert, um zu bestimmen, ob der Roboter nach links oder rechts ausweichen oder weiter geradeaus fahren muss.
 
-Hierbei handelt es sich um eine einfache Bedingung, bei der das IR-Modul erkennt, ob sich der Roboter exakt auf der Linie befindet (Muster: '0b001100'), und ihn entsprechend steuert. Je nach Position wird die Richtung des Roboters angepasst.
-
-**Farberkennung:** Zur Farberkennung verwendet der AI-Starter zwei Farbsensoren. Diese sind in der Lage, die Intensität der Rot-, Grün- und Blauanteile des erfassten Lichts zu messen. Durch Vergleich der Farbsensorwerte mit definierten Schwellenwerten kann das Programm erkennen, ob eine rote oder grüne Farbe vorliegt. Wird eine Farbe erkannt, gibt der Roboter akustische Signale aus (z.B. zweimaliges Piepen bei Rot, dreimaliges Piepen bei Grün), um den Benutzer über die erkannte Farbe zu informieren.
-
-Der folgende Code überprüft, ob die Farbe Rot erkannt wird:
-
+Der folgende Codeblock zeigt die Hauptlogik der Linienverfolgung:
 ```cpp
-if ((redValue1 - greenValue1 > Threshold && redValue1 - blueValue1 > Threshold) &&
-    (redValue2 - greenValue2 > Threshold && redValue2 - blueValue2 > Threshold)) {
+// 0: Keine Schwarze Linie
+// 1: Schwarze Linie
+int speed = 150;
+
+if (irstate == 0b001100) {  // Die mittleren Sensoren (IR3 & IR4) lesen die Schwarze Linie
+    AIStarter_SmartBotSetMovment(FRONT, speed);  // geradeaus fahren
+} else if (irstate == 0b000110) {  // Die rechten Sensoren (IR4 & IR5) lesen die Schwarze Linie
+    AIStarter_SmartBotSetMovment(RIGHT, speed);  // rechts fahren
+}
+```
+Hierbei handelt es sich um eine einfache Bedingung, bei der das IR-Modul erkennt, ob sich der Roboter exakt auf der Linie befindet (Muster: 0b001100), und ihn entsprechend steuert. Je nach Position wird die Richtung des Roboters angepasst.
+
+\subsection*{Farberkennung:} Zur Farberkennung verwendet der AI-Starter zwei Farbsensoren. Diese sind in der Lage, die Intensität der Rot-, Grün- und Blauanteile des erfassten Lichts zu messen. Durch Vergleich der Farbsensorwerte mit definierten Schwellenwerten kann das Programm erkennen, ob eine rote oder grüne Farbe vorliegt. Wird eine Farbe erkannt, gibt der Roboter akustische Signale aus (z.B. zweimaliges Piepen bei Rot, dreimaliges Piepen bei Grün), um den Benutzer über die erkannte Farbe zu informieren.
+
+#### Farberkennung
+Der folgende Code überprüft, ob die Farbe Rot erkannt wird:
+```cpp
+\begin{lstlisting}[language=ST]
+int Threshold = 20;
+redValue1: Der Farben Sensor 1 liest farbe "Rot"
+redValue2: Der Farben Sensor 2 liest farbe "Rot"
+
+ greenValue1: Der Farben Sensor 1 liest farbe "Grün"
+ greenValue2: Der Farben Sensor 2 liest farbe "Grün"
+
+blueValue1: Der Farben Sensor 1 liest farbe "Blau"
+blueValue2: Der Farben Sensor 2 liest farbe "Blau"
+
+ if ((redValue1 - greenValue1 > Threshold && redValue1 - blueValue1 > Threshold) &&
+     (redValue2 - greenValue2 > Threshold && redValue2 - blueValue2 > Threshold)) {
     if (colorState != RED) {
         colorState = RED;
         Serial.println("Rot erkannt - Beep");
         // Tiefes Piepen als Signal
     }
 }
+\end{lstlisting}
 ```
+
 Hierbei werden die Rot-, Grün- und Blauwerte der beiden Sensoren miteinander verglichen, um eine zuverlässige Farberkennung zu gewährleisten. Die Nutzung zweier Sensoren sorgt für eine erhöhte Genauigkeit und Stabilität bei der Farbdetektion.
 
