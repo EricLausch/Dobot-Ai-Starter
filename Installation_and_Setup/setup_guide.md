@@ -23,8 +23,8 @@ Um die Bibliothek für den AI-Starter zu installieren und das System korrekt zu 
 Im GitHub-Repository [Dobot AI-Starter](https://github.com/michi-bot/Dobot-Ai-Starter/tree/main) sind die von uns beschriebenen Programme und die Beispielcodes zu finden.
 
 - Kopiere oder lade den Code in die **Arduino IDE**.
-- Klicke oben links auf das Symbol mit dem **grünen Haken**, um den Code zu **kompilieren** bzw. **überprüfen**.
-- Wenn der Code erfolgreich kompiliert wurde, klicke auf das Symbol mit dem **grünen Pfeil**, um das Programm auf den **AI-Starter** **hochzuladen**.
+- Klicke oben links auf das Symbol mit dem `grünen Haken`, um den Code zu **kompilieren** bzw. **überprüfen**.
+- Wenn der Code erfolgreich kompiliert wurde, klicke auf das Symbol mit dem `grünen Pfeil`, um das Programm auf den **AI-Starter** **hochzuladen**.
 
 
 ## Testumgebung
