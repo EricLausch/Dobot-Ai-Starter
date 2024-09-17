@@ -28,8 +28,6 @@ if (irstate == 0b001100) {  // Die mittleren Sensoren (IR3 & IR4) lesen die Schw
 ```
 Hierbei handelt es sich um eine einfache Bedingung, bei der das IR-Modul erkennt, ob sich der Roboter exakt auf der Linie befindet (Muster: 0b001100), und ihn entsprechend steuert. Je nach Position wird die Richtung des Roboters angepasst.
 
-**Verbesserungen bei der Linienverfolgung:** In der Praxistests tritt das Problem auf, dass die Infrarotsensoren nicht immer konsistent reagieren. Selbst wenn sich das Fahrzeug vollständig auf einer weißen Fläche befindet, melden einige der Sensoren fälschlicherweise \texttt{1}, als ob sie eine schwarze Linie erkannt hätten. Dies führt zu Fehlfunktionen bei der Linienverfolgung, da der Roboter auf Basis dieser falschen Erkennung versucht zu korrigieren, obwohl keine Linie vorhanden ist. Ohne eine Möglichkeit, die Empfindlichkeit der Sensoren anzupassen, bleibt dieses Problem jedoch bestehen. (Oder man versucht die Sensoren manuel auszutauschen und befestigt neue.)
-
 #### Farberkennung
 Zur Farberkennung verwendet der AI-Starter zwei Farbsensoren. Diese sind in der Lage, die Intensität der Rot-, Grün- und Blauanteile des erfassten Lichts zu messen. Durch Vergleich der Farbsensorwerte mit definierten Schwellenwerten kann das Programm erkennen, ob eine rote oder grüne Farbe vorliegt. Wird eine Farbe erkannt, gibt der Roboter akustische Signale aus (z.B. zweimaliges Piepen bei Rot, dreimaliges Piepen bei Grün), um den Benutzer über die erkannte Farbe zu informieren.
 
@@ -59,4 +57,7 @@ blueValue2: Der Farben Sensor 2 liest farbe "Blau"
 
 Hierbei werden die Rot-, Grün- und Blauwerte der beiden Sensoren miteinander verglichen, um eine zuverlässige Farberkennung zu gewährleisten. Die Nutzung zweier Sensoren sorgt für eine erhöhte Genauigkeit und Stabilität bei der Farbdetektion.
 
+#### Ausblick für Verbesserungen
+
+**Verbesserungen bei der Linienverfolgung:** In der Praxistests tritt das Problem auf, dass die Infrarotsensoren nicht immer konsistent reagieren. Selbst wenn sich das Fahrzeug vollständig auf einer weißen Fläche befindet, melden einige der Sensoren fälschlicherweise \texttt{1}, als ob sie eine schwarze Linie erkannt hätten. Dies führt zu Fehlfunktionen bei der Linienverfolgung, da der Roboter auf Basis dieser falschen Erkennung versucht zu korrigieren, obwohl keine Linie vorhanden ist. Ohne eine Möglichkeit, die Empfindlichkeit der Sensoren anzupassen, bleibt dieses Problem jedoch bestehen. (Oder man versucht die Sensoren manuel auszutauschen und befestigt neue.)
 **Probleme bei der Farberkennung:** Auch die Farbsensoren des AI-Starters arbeiten nicht immer zuverlässig. Besonders während der Fahrt kann es vorkommen, dass Farben wie Rot oder Grün nicht korrekt erkannt werden. Dieses Problem tritt hauptsächlich auf, wenn der Roboter sich schnell bewegt, was darauf hinweist, dass die Erfassungszeit der Farbsensoren möglicherweise zu kurz ist. Eine mögliche Verbesserung wäre hier, die Sensordaten häufiger zu lesen oder die Geschwindigkeit des Roboters zu reduzieren, um eine stabilere Erkennung der Farben zu gewährleisten.
