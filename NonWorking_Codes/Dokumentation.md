@@ -45,7 +45,7 @@ void SET_MOTOR_SPEED(int MOTORR_tar_speed, int MOTORL_tar_speed)
         MOTORL_last_tar_speed = MOTORL_tar_speed;
     }
 }
-
+```
 ## Probleme mit der Funktion `AIStarter_SmartBotSetMotor`
 
 Die Funktion `AIStarter_SmartBotSetMotor(int port, int speed)` wird in den Beispielcodes von Dobot, wie `LineControl`, `ObstacleAvoid` und `ColorRecognition`, verwendet. Der serielle Monitor zeigte zwar die korrekten Werte für die Sensoren und die berechneten Geschwindigkeiten der Räder an, dennoch bewegte sich das Fahrzeug nicht wie vorgesehen.
