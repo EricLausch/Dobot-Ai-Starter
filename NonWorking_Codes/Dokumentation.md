@@ -96,6 +96,7 @@ float getCurrentPos(const int irstate) {
 
     return curPos;
 }
+```
 
 ## Analyse der Funktion `setCarSpeed`
 
@@ -130,4 +131,5 @@ void setCarSpeed(const float curPos) {
     AIStarter_SmartBotSetMotor(MOTORL, speedLeftWheel);
     AIStarter_SmartBotSetMotor(MOTORR, speedRightWheel);
 }
+```
 Der PID-Regler sorgt für eine dynamische Anpassung der Geschwindigkeit, indem er den Fehler, die Fehlerhistorie (integraler Anteil) und die Änderungsrate des Fehlers (differentieller Anteil) berücksichtigt.
