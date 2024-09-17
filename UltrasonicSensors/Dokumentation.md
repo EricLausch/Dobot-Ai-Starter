@@ -28,3 +28,5 @@ void avoidObstacles() {
 }
 ```
 Durch diese Bedingungen stellt das Programm sicher, dass der Roboter in Situationen mit nahegelegenen Hindernissen flexibel reagiert. Es wird stets überprüft, ob links oder rechts mehr Platz zum Ausweichen vorhanden ist, und daraufhin die Fahrtrichtung angepasst. Falls keine Hindernisse vorliegen, setzt der Roboter seine Vorwärtsbewegung fort.
+
+**Verbesserungspotenzial bei der Hindernisvermeidung**: Die Implementierung der Hindernisvermeidung funktioniert grundsätzlich, jedoch könnten die Ultraschallsensoren effizienter arbeiten. Manchmal werden Hindernisse erst spät erkannt oder kleine Objekte gar nicht. Eine mögliche Verbesserung wäre die Nutzung weiterer oder präziserer Sensoren, um eine genauere Hinderniserkennung und -vermeidung zu gewährleisten. Ein Algorithmus, der die Bewegungen bei Annäherung an Hindernisse besser optimiert, könnte ebenfalls die Reaktionszeit und Sicherheit des Roboters erhöhen.
