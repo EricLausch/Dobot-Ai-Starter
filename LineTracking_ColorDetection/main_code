@@ -15,7 +15,7 @@ void setup() {
     AIStarter_SmartBotInit();
     Serial.begin(9600);
 }
-
+//infrared Sensoren in Binär Form
 int getIRState() {
     int irstate = 0;
     for (int i = 0; i < 6; i++) {
@@ -25,6 +25,15 @@ int getIRState() {
 }
 
 void colorCheck() {
+//redValue1: Der Farben Sensor 1 liest farbe "Rot"
+//redValue2: Der Farben Sensor 2 liest farbe "Rot"
+
+// greenValue1: Der Farben Sensor 1 liest farbe "Grün"
+// greenValue2: Der Farben Sensor 2 liest farbe "Grün"
+
+//blueValue1: Der Farben Sensor 1 liest farbe "Blau"
+//blueValue2: Der Farben Sensor 2 liest farbe "Blau"
+
     // Farbwerte für beide Sensoren lesen
     int redValue1 = AIStarter_SmartBotGetColorSenor(COLORSENOR1, RCOLOR);
     int greenValue1 = AIStarter_SmartBotGetColorSenor(COLORSENOR1, GCOLOR);
@@ -134,15 +143,14 @@ void linieVerfolgung(int irstate) {
 }
 
 void loop() {
-    // Get the current infrared sensor states
+    // Status der Infrared Sensoren
     int irstate = getIRState();
 
-    // Use the infrared sensor data to track the line
+    // Infrared Sensor Daten für Linie Verfolgung
     linieVerfolgung(irstate);
 
-    // Check for color and trigger beep if necessary
+    // Farbe Check
     colorCheck();
 
-    // Small delay to stabilize the loop
     delay(100);
 }
