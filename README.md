@@ -29,7 +29,8 @@ Zunächst nutzten wir die von Dobot bereitgestellten Codes aus der offiziellen G
 
 ## Autoren
 
-Aymane Elhamdouni & Michael Bäumler 
+ - Aymane Elhamdouni
+ - Michael Bäumler 
 ---
 
 Weitere Informationen zu den spezifischen Codes und den technischen Details findest du in den oben verlinkten Dokumenten.
