@@ -16,7 +16,7 @@ Um die Bibliothek für den AI-Starter zu installieren und das System korrekt zu 
 - Gehe erneut zu `Werkzeuge → Board` und wähle `Arduino Mega or Mega2560` aus.
 - Wähle im Menü `Werkzeuge → Prozessor` ebenfalls `Arduino Mega or Mega2560` aus.
 - Gehe zu `Werkzeuge → Port` und wähle den entsprechenden COM-Port für `Arduino Mega or Mega2560`.
-- Öffne den `seriellen Monitor` über `Werkzeuge → Serieller Monitor`, um Sensordaten auszulesen. Dies funktioniert nur, wenn der AI-Starter mit der Arduino IDE verbunden ist.
+- Öffne den `seriellen Monitor` über `Werkzeuge → Serieller Monitor` und stelle die Baudrate auf 115200, um die Sensordaten auszulesen. Dies funktioniert nur, wenn der AI-Starter mit der Arduino IDE verbunden ist.
 
 ## Code Implementierung
 
