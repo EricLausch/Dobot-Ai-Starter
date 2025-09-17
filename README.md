@@ -6,7 +6,7 @@ Im Rahmen dieses Projektes - welches wir für das Modul **Ausgewählte Themen de
 
 Zunächst nutzten wir die von Dobot bereitgestellten Codes aus der offiziellen Guideline, um diese Funktionen zu implementieren. Da diese jedoch nicht wie erwartet funktionierten, entwickelten wir eigene Codes zur Lösung der Probleme.
 
-![AI-Starter Roboter](./images/Dobot_Bild.jpeg)
+![AI-Starter Roboter](./images/Dobot_Bild.jpeg | width=100)
 *Quelle: [Dobot AI-Starter Review](https://uptimefab.com/2020/06/06/dobot-ai-starter-review/)*
 
 ## Inhalte des Repositories
